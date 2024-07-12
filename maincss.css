@@ -1,0 +1,212 @@
+*{
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   text-decoration: none;
+}
+html, body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+header{
+  position: relative;
+  width: 100%;
+  height: 100px;
+  background-color: rgb(21, 24, 36);
+}
+#navbar{
+  width: 100%;
+  height: 60px;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+}
+#navbar img{
+  width: 60px;
+  height: auto;
+}
+header ul{
+  list-style-type: none;
+  display: flex;
+  padding-right: 40px;
+}
+header ul li{
+  margin-left: 20px;
+}
+header ul li a{
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-family: 'Anton', sans-serif;
+}
+header ul li a #on-live-img{
+  position: relative;
+  width: 18px;
+  height: 18px;
+  left: -10px;
+  top: 8px;
+}
+.off-screen-menu{
+  background-color: rgb(34, 37, 49);
+  height: 100vh;
+  width: 100%;
+  max-width: 450px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;    
+  justify-content: center;
+  text-align: center;
+  font-size: 3rem;
+  transition: .3s ease-in-out;
+  z-index: 1000;
+}
+.off-screen-menu ul{
+  list-style-type: none;
+  padding: 0;
+  display: block;
+}
+.off-screen-menu ul li{
+  display: block;
+  margin: 10px;
+}
+.off-screen-menu.active{
+  transform: translateX(0)
+}
+.ham-menu{
+  height: 50px;
+  width: 40px;
+  cursor: pointer;
+  top: 50%;
+  right: 2%;
+  position: absolute;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+.ham-menu span{
+  height: 5px;
+  width: 100%;
+  background-color: white;
+  border-radius: 25px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: .3s ease;
+}
+.ham-menu span:nth-child(1){
+  top: 25%;
+}
+.ham-menu span:nth-child(3){
+  top: 75%;
+}
+.ham-menu.active span{
+  background-color: white;
+}
+.ham-menu.active span:nth-child(1){
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.ham-menu.active span:nth-child(2){
+  opacity: 0;
+}
+.ham-menu.active span:nth-child(3){
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 999;
+}
+#live-content{
+    width: 100%;
+    height: calc(100vh - 100px);
+    position: relative;
+    background-color: black;
+  }
+  
+  #live-content::before {
+    background-image: url(img/d725eec64f5d12d2b192e3dd000b8fc8.jpg);
+    background-size: cover;
+    position: absolute;
+    content: '';
+    inset: 0;
+    opacity: 0.17;
+  }
+  #live-content h1{
+    font-size: 65pt;
+    color: white;
+    text-align: center;
+    isolation: isolate;
+    padding-top: 225px;
+    font-family: Anton, sans-serif;
+    font-weight: 800;
+  }
+  #live-content h1 span{
+    color: skyblue;
+  }
+  #live-content h2{
+    font-size: 40pt;
+    color: WHITE;
+    text-align: center;
+    isolation: isolate;
+    margin-top: -20px;
+    font-family: Anton, sans-serif;
+    font-weight: 10;
+  }
+  #live-content-but1{
+    display: block;
+    isolation: isolate;
+    background: none;
+    height: 70px;
+    width: 350px;
+    border: 2px solid skyblue;
+    border-radius: 30px;
+    color: white;
+    font-size: 30pt;
+    font-family: Anton, sans-serif;
+    font-weight: 800;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.3s ease-in-out;
+    margin-top: 30px;
+  }
+  #live-content-but1:hover{
+    background-color: rgb(21, 24, 36);
+    border: rgb(21, 24, 36);
+    color: skyblue;
+  }
+  #live-content-but2{
+    display: block;
+    isolation: isolate;
+    background: none;
+    height: 70px;
+    width: 350px;
+    background-color: rgb(21, 24, 36);
+    border: rgb(21, 24, 36);
+    border-radius: 30px;
+    color: skyblue;
+    font-size: 30pt;
+    font-family: Anton, sans-serif;
+    font-weight: 800;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.3s ease-in-out;
+    margin-top: 20px;
+  }
+  #live-content-but2:hover{
+    background: none;
+    border: 2px solid skyblue;
+    color: white;
+  }
