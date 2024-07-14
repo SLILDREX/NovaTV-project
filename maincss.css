@@ -25,9 +25,10 @@ header {
   display: flex;
   align-items: center;
 }
-#navbar img {
+#logo{
   width: 60px;
   height: auto;
+  vertical-align: middle;
 }
 header ul {
   list-style-type: none;
