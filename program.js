@@ -1,9 +1,6 @@
 const hamMenu = document.querySelector(".ham-menu");
 const offScreenMenu = document.querySelector(".off-screen-menu");
 const overlay = document.querySelector('.overlay');
-const day = new Date().getDay();
-const date = new Date().getDate();
-const month = new Date().getMonth();
 const firstSpan1 = document.getElementById("firstSpan1");
 const secondSpan1 = document.getElementById("firstSpan2");
 const thirdSpan1 = document.getElementById("firstSpan3");
@@ -25,8 +22,11 @@ const fourthSpan3 = document.getElementById("thirdSpan4");
 const fifthSpan3 = document.getElementById("thirdSpan5");
 const sixthSpan3 = document.getElementById("thirdSpan6");
 const seventhSpan3 = document.getElementById("thirdSpan7");
-
-console.log(month);
+const currentDate = new Date();
+const currentDay = currentDate.getDate();
+const currentMonth = currentDate.getMonth();
+const currentYear = currentDate.getFullYear();
+const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
 
 hamMenu.addEventListener("click", () => {
   hamMenu.classList.toggle("active");
@@ -34,7 +34,15 @@ hamMenu.addEventListener("click", () => {
   overlay.style.display = offScreenMenu.classList.contains('active') ? 'block' : 'none';
 });
 
-switch(day){
+firstSpan2.textContent = currentDay;
+secondSpan2.textContent = (currentDay + 1) % daysInMonth || daysInMonth;
+thirdSpan2.textContent = (currentDay + 2) % daysInMonth || daysInMonth;
+fourthSpan2.textContent = (currentDay + 3) % daysInMonth || daysInMonth;
+fifthSpan2.textContent = (currentDay + 4) % daysInMonth || daysInMonth;
+sixthSpan2.textContent = (currentDay + 5) % daysInMonth || daysInMonth;
+seventhSpan2.textContent = (currentDay + 6) % daysInMonth || daysInMonth;
+
+switch(currentDay % 7) {
   case 0:
     firstSpan1.textContent = "Неделя";
     secondSpan1.textContent = "Понеделник";
@@ -100,123 +108,21 @@ switch(day){
     break;
 }
 
-firstSpan2.textContent = date;
-secondSpan2.textContent = date + 1;
-thirdSpan2.textContent = date + 2;
-fourthSpan2.textContent = date + 3;
-fifthSpan2.textContent = date + 4;
-sixthSpan2.textContent = date + 5;
-seventhSpan2.textContent = date + 6;
+const monthNames = ["Януари", "Февруари", "Март", "Април", "Май", "Юни", "Юли", "Август", "Септември", "Октомври", "Ноември", "Декември"];
 
-switch(month){
-  case 0:
-    firstSpan3.textContent = "Януари";
-    secondSpan3.textContent = "Януари";
-    thirdSpan3.textContent = "Януари";
-    fourthSpan3.textContent = "Януари";
-    fifthSpan3.textContent = "Януари";
-    sixthSpan3.textContent = "Януари";
-    seventhSpan3.textContent = "Януари";
-    break;
-  case 1:
-    firstSpan3.textContent = "Февруари";
-    secondSpan3.textContent = "Февруари";
-    thirdSpan3.textContent = "Февруари";
-    fourthSpan3.textContent = "Февруари";
-    fifthSpan3.textContent = "Февруари";
-    sixthSpan3.textContent = "Февруари";
-    seventhSpan3.textContent = "Февруари";
-    break;
-  case 2:
-    firstSpan3.textContent = "Март";
-    secondSpan3.textContent = "Март";
-    thirdSpan3.textContent = "Март";
-    fourthSpan3.textContent = "Март";
-    fifthSpan3.textContent = "Март";
-    sixthSpan3.textContent = "Март";
-    seventhSpan3.textContent = "Март";
-    break;
-  case 3:
-    firstSpan3.textContent = "Април";
-    secondSpan3.textContent = "Април";
-    thirdSpan3.textContent = "Април";
-    fourthSpan3.textContent = "Април";
-    fifthSpan3.textContent = "Април";
-    sixthSpan3.textContent = "Април";
-    seventhSpan3.textContent = "Април";
-    break;
-  case 4:
-    firstSpan3.textContent = "Май";
-    secondSpan3.textContent = "Май";
-    thirdSpan3.textContent = "Май";
-    fourthSpan3.textContent = "Май";
-    fifthSpan3.textContent = "Май";
-    sixthSpan3.textContent = "Май";
-    seventhSpan3.textContent = "Май";
-    break;
-  case 5:
-    firstSpan3.textContent = "Юни";
-    secondSpan3.textContent = "Юни";
-    thirdSpan3.textContent = "Юни";
-    fourthSpan3.textContent = "Юни";
-    fifthSpan3 .textContent = "Юни";
-    sixthSpan3.textContent = "Юни";
-    seventhSpan3.textContent = "Юни";
-    break;
-  case 6:
-    firstSpan3.textContent = "Юли";
-    secondSpan3.textContent = "Юли";
-    thirdSpan3.textContent = "Юли";
-    fourthSpan3.textContent = "Юли";
-    fifthSpan3.textContent = "Юли";
-    sixthSpan3.textContent = "Юли";
-    seventhSpan3.textContent = "Юли";
-    break;
-  case 7:
-    firstSpan3.textContent = "Август";
-    secondSpan3.textContent = "Август";
-    thirdSpan3.textContent = "Август";
-    fourthSpan3.textContent = "Август";
-    fifthSpan3.textContent = "Август";
-    sixthSpan3.textContent = "Август";
-    seventhSpan3.textContent = "Август";
-    break;
-  case 8:
-    firstSpan3.textContent = "Септември";
-    secondSpan3.textContent = "Септември";
-    thirdSpan3.textContent = "Септември";
-    fourthSpan3.textContent = "Септември";
-    fifthSpan3.textContent = "Септември";
-    sixthSpan3.textContent = "Септември";
-    seventhSpan3.textContent = "Септември";
-    break;
-  case 9:
-    firstSpan3.textContent = "Октомври";
-    secondSpan3.textContent = "Октомври";
-    thirdSpan3.textContent = "Октомври";
-    fourthSpan3.textContent = "Октомври";
-    fifthSpan3.textContent = "Октомври";
-    sixthSpan3.textContent = "Октомври";
-    seventhSpan3.textContent = "Октомври";
-    break;
-  case 10:
-    firstSpan3.textContent = "Ноември";
-    secondSpan3.textContent = "Ноември";
-    thirdSpan3.textContent = "Ноември";
-    fourthSpan3.textContent = "Ноември";
-    fifthSpan3.textContent = "Ноември";
-    sixthSpan3.textContent = "Ноември";
-    seventhSpan3.textContent = "Ноември";
-    break;
-  case 11:
-    firstSpan3.textContent = "Декември";
-    secondSpan3.textContent = "Декември";
-    thirdSpan3.textContent = "Декември";
-    fourthSpan3.textContent = "Декември";
-    fifthSpan3.textContent = "Декември";
-    sixthSpan3.textContent = "Декември";
-    seventhSpan3.textContent = "Декември";
-    break;
+function getMonthName(monthIndex) {
+  return monthNames[monthIndex % 12];
+}
+
+const spans = [firstSpan3, secondSpan3, thirdSpan3, fourthSpan3, fifthSpan3, sixthSpan3, seventhSpan3];
+
+for (let i = 0; i < spans.length; i++) {
+  const day = currentDay + i;
+  if (day > daysInMonth) {
+    spans[i].textContent = getMonthName(currentMonth + 1);
+  } else {
+    spans[i].textContent = getMonthName(currentMonth);
+  }
 }
 
 function firstBth(){
