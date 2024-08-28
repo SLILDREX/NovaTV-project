@@ -240,6 +240,9 @@ footer{
   font-style: normal;
   line-height: 30px;
 }
+.footer-parts ul li:hover {
+  color: skyblue;
+}
 #download-options{
   padding-top: 10px;
   text-align: center;
@@ -257,6 +260,7 @@ footer{
   border: none;
   margin-left: 40px;
   margin-right: 20px;
+  cursor: pointer;
 }
 #google-news img{
   width: 22px;
