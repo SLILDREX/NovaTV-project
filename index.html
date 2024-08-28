@@ -5,37 +5,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nova TV</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
       <div class="off-screen-menu">
         <ul>
-          <li>test</li>
-          <li>test</li>
-          <li>test</li>
-          <li>test</li>
-          <li>test</li>
-          <li>test</li>
-          <li>test</li>
-          <li>test</li>
-          <li>test</li>
-          <li>test</li>
+          <a href="https://nova.bg/novanews" target="_blank"><li>NOVA NEWS</li></a>
+          <a href="https://nova.bg/shows" target="_blank"><li>ШОУТА И ПРЕДАВАНИЯ</li></a>
+          <a href="https://nova.bg/series_movies" target="_blank"><li>ФИЛМИ И СЕРИАЛИ</li></a>
+          <a href="https://nova.bg/faces" target="_blank"><li>ЛИЦАТА НА NOVA</li></a>
+          <a href="https://nova.bg/mynews" target="_blank"><li>МОЯТА НОВИНА</li></a>
+          <a href="https://nova.bg/videos" target="_blank"><li>ВИДЕО</li></a>
+          <a href="https://nova.bg/galleries" target="_blank"><li>ГАЛЕРИИ</li></a>
+          <a href="https://nova.bg/inspired_by_business" target="_blank"><li>ВДЪХНОВЕНИ ОТ БИЗНЕСА</li></a>
+          <a href="https://nova.bg/csr" target="_blank"><li>NOVA ОТГОВОРНОСТ</li></a>
+          <a href="https://nova.bg/karieri" target="_blank"><li>NOVA КАРИЕРА</li></a>
         </ul>
       </div>
       <div id="navbar">
         <a href="index.html"><img src="img/nova-logo.svg" alt="" id="logo"/><a>
         <ul>
-          <li><a href="#">НОВИНИ</a></li>
+          <li><a href="news.html">НОВИНИ</a></li>
           <li><a href="program.html">ПРОГРАМА</a></li>
-          <li><a href="#">НА ЗАПИС</a></li>
+          <li><a href="https://play.nova.bg/?_gl=1*1seh1lq*_ga*MjA1MzUxOTUzNS4xNzIwNzAxMDcy*_ga_79JNJVS3T9*MTcyNDAwNjExMS4xMi4xLjE3MjQwMDYxMTMuNTguMC4w">НА ЗАПИС</a></li>
           <li>
-            <a href="#"
+            <a href="https://nova.bg/live"
               >НА ЖИВО<img
                 src="img/nova-logo-small.png"
                 id="on-live-img"
@@ -52,11 +49,73 @@
       </div>
     </header>
     <section id="live-content">
-      <h1>Новините по <span>NOVA</span></h1>
+      <h1>Новините по <span>NOVA</span> </h1>
       <h2>най-важното от деня</h2>
-      <button id="live-content-but1">Гледай сега</button>
-      <button id="live-content-but2">Виж още</button>
-    </section>
+      <a href="https://nova.bg/live"><button id="live-content-but1">Гледай сега</button></a>
+      <a href="#popular"><button id="live-content-but2">Виж още</button></a>
+   </section>
+   <section id="popular">
+     <h2>Популярни</h2>
+     <div id="popular-over">
+       <div class="popular-content" id="popular-content-1">
+         <div class="content-div-text">
+           <h3>Ергенът</h3>
+         </div>
+       </div>
+       <div class="popular-content" id="popular-content-2">
+         <div class="content-div-text">
+            <h3>Съдебен спор</h3>
+         </div>
+       </div>
+       <div class="popular-content" id="popular-content-3">
+         <div class="content-div-text">
+            <h3>Hells Kitchen</h3>
+         </div>
+       </div>
+       <div class="popular-content" id="popular-content-4">
+         <div class="content-div-text">
+           <h3>Кошмари в кухнята</h3>
+         </div>  
+       </div>
+     </div>
+   </section>
+
+ </section>
+ <section id="sport">
+   <h2>Спорта</h2>
+   <div id="sport-over">
+     <div class="sport-content" id="sport-content-1">
+       <div class="content-div-text-sport">
+         <h3>Фурбол</h3>
+       </div>
+     </div>
+     <div class="sport-content" id="sport-content-2">
+       <div class="content-div-text-sport">
+          <h3>Баскетбол</h3>
+       </div>
+     </div>
+     <div class="sport-content" id="sport-content-3">
+       <div class="content-div-text-sport">
+          <h3>Волейбол</h3>
+       </div>
+     </div>
+     <div class="sport-content" id="sport-content-4">
+       <div class="content-div-text-sport">
+         <h3>Таеклондо</h3>
+       </div>  
+     </div>
+     <div class="sport-content" id="sport-content-5">
+       <div class="content-div-text-sport">
+         <h3>Олимпийски игри</h3>
+       </div>  
+     </div>
+   </div>
+ </section>
+
+ <section id="your-news">
+   <h2>Сподели ни твоята <span>новина</span></h2>
+   <a href="https://nova.bg/mynews/add"><button id="but-help">Разкажи ни</button></a>
+ </section>
     <footer>
       <div class="footer-parts">
         <h3>НОВИНИ</h3>

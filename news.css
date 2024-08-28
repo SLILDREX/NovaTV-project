@@ -138,82 +138,174 @@ disable-scroll {
   overflow: hidden;
 }
 main{
-  padding-top: 40px;
-  text-align: center;
-  width: 100%;
-  height: 1000px;
-  background-color: grey;
-}
-main button{
-  width: 100px;
-  height: 80px;
-  background-color: #dedee7;
-  color: #3c3c3c;
-  border: none;
-  border-radius: 5px;
-  font-family: "PT Sans", sans-serif;
-  font-size: 14px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  cursor: pointer;
-}
-#program{
-  width: 60%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
-.firstSpan{
-  color: #0099cc;
-  font-weight: bold;
+main h1{
+  margin-top: 60px;
+  font-family: "PT Sans Narrow", sans-serif;
+  color: #0d329a;
+  font-size: 40px;
+  font-weight: 700;
 }
-.program-list{
+hr{
+  width: 70%;
+  height: 5px;
+  background-color: rgb(211, 211, 211, 0.4);
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#main-grid{
   display: grid;
-  grid-template-rows: repeat(8, 1fr);
-  float: left;
-  width: 100%;
+  grid-template-columns: 70% 1fr;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
-.program-list div{
+.news{
   display: grid;
-  grid-template-columns: 120px 3fr;
-  width: 100%;
-  height: 100px;
-  background-color: #f7f7f9;
+  grid-template-columns: 300px 1fr;
+  margin-bottom: 20px;
 }
-.program-list h1{
-  width: 100%;
-  color: #0099cc;
-  margin-top: auto;
-  margin-bottom: auto;
+.description{
+  margin-top: 5px;
+  margin-left: 10px;
 }
-.program-list h3{
+.news h2{
+  font-family: PT Sans Narrow, sans-serif;
+  font-weight: 700;
+  color: #0d329a;
+  font-size: 14px;
+}
+.news h3{
+  font-family: Robot Condensed, sans-serif;
+  font-weight: 600;
+  color: #252525;
+  font-size: 20px;
+}
+#weather{
+  background-color: lightgrey;
+  margin-left: 15px;
+  height: 170px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+#weather.quitecold-freezing{
+  background-image: linear-gradient(to right, rgb(0, 0, 132), rgb(0, 0, 254));
+}
+#weather.freezing-cold{
+  background-image: linear-gradient(to right, rgb(0, 0, 254), rgb(48, 101, 255));
+}
+#weather.cold-chilly{
+  background-image: linear-gradient(to right,rgb(48, 101, 255), rgb(156, 206, 255));
+}
+#weather.chilly-cool{
+  background-image: linear-gradient(to right,rgb(156, 206, 255), rgb(49, 207, 206));
+}
+#weather.cool-nice{
+  background-image: linear-gradient(to right,rgb(49, 207, 206), rgb(0, 129, 0));
+}
+#weather.nice-warm{
+  background-image: linear-gradient(to right,rgb(0, 129, 0), rgb(155, 207, 0));
+}
+#weather.warm-quitehot{
+  background-image: linear-gradient(to right,rgb(155, 207, 0), rgb(255, 207, 0));
+}
+#weather.quitehot-damnhot{
+  background-image: linear-gradient(to right,rgb(255, 207, 0), rgb(255, 101, 1));
+}
+#weather h1{
+  margin: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #1d1d1d;
+  font-size: 60px;
+}
+#info{
+  display: grid;
+  grid-template-columns: 1fr 90px;
+  font-size: 30px;
+}
+.weather-icon{
+  width: 90px;
+  height: 90px;
+}
+#text-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;;
+  margin-left: 10px;
+  line-height: 35px;
+}
+.gallery{
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  margin-bottom: 20px;
+  margin-left: 15px;
+}
+#gallery-main h1{
+  margin-left: 15px;
+}
+#gallery-main hr{
+  width: 100%;
+  margin-left: 15px;
+}
+.gallery img{
+  width: 100%;
+}
+.gallery h2{
+  width: 200px;
+  margin-left: 15px;
   font-family: "Roboto Condensed", sans-serif;
-  font-optical-sizing: auto;
+  font-size: 18px;
   font-weight: 400;
-  font-style: normal;
-  text-align: start;
-  margin-top: auto;
-  margin-bottom: auto;
 }
-#firstDay{
-  display: block;
+#most-readed{
+  margin-left: 15px;
 }
-#secondDay{
-  display: none;
+#most-readed h1{
+  background-color: #ddd;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 27px;
+  font-weight: 500;
+  color: rgb(37, 37, 37);
 }
-#thirdDay{
-  display: none;
+#most-readed li{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  padding: 20px 20px 20px 15px;
+  counter-increment: list-counter;
 }
-#fourthDay{
-  display: none;
+#most-readed li::before {
+  color: #0d329a;
+  font-size: 24px;
+  font-family: "PT Sans", sans-serif;
+  margin-right: 10px;
+  margin-top: -5px;
+  content: "0" counter(list-counter) ".";
 }
-#fifthDay{
-  display: none;
+#most-readed a{
+  text-decoration: none;
+  color: #252525;
 }
-#sixthDay{
-  display: none;
+#most-readed a:hover{
+  color: #0d329a;
 }
-#seventhDay{
-  display: none;
+#most-readed a:active{
+  color: rgb(25, 149, 190);
+  transition: color 0.1s;
+}
+#most-readed h3{
+  font-weight: 500;
 }
 footer{
   height: 220px;
