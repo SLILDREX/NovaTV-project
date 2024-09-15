@@ -27,6 +27,7 @@ const currentDate = new Date();
 const currentDay = currentDate.getDate();
 const currentMonth = currentDate.getMonth();
 const currentYear = currentDate.getFullYear();
+const currentDayOfWeek = currentDate.getDay();
 const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
 
 hamMenu.addEventListener("click", () => {
@@ -36,6 +37,16 @@ hamMenu.addEventListener("click", () => {
   disableScroll.style.overflow = offScreenMenu.classList.contains('active') ? 'hidden' : 'auto';
 });
 
+const dayNames = ["Неделя", "Понеделник", "Вторник", "Сряда", "Четвъртък", "Петък", "Събота"];
+
+firstSpan1.textContent = dayNames[currentDayOfWeek % 7];
+secondSpan1.textContent = dayNames[(currentDayOfWeek + 1) % 7];
+thirdSpan1.textContent = dayNames[(currentDayOfWeek + 2) % 7];
+fourthSpan1.textContent = dayNames[(currentDayOfWeek + 3) % 7];
+fifthSpan1.textContent = dayNames[(currentDayOfWeek + 4) % 7];
+sixthSpan1.textContent = dayNames[(currentDayOfWeek + 5) % 7];
+seventhSpan1.textContent = dayNames[(currentDayOfWeek + 6) % 7];
+
 firstSpan2.textContent = currentDay;
 secondSpan2.textContent = (currentDay + 1) % daysInMonth || daysInMonth;
 thirdSpan2.textContent = (currentDay + 2) % daysInMonth || daysInMonth;
@@ -43,72 +54,6 @@ fourthSpan2.textContent = (currentDay + 3) % daysInMonth || daysInMonth;
 fifthSpan2.textContent = (currentDay + 4) % daysInMonth || daysInMonth;
 sixthSpan2.textContent = (currentDay + 5) % daysInMonth || daysInMonth;
 seventhSpan2.textContent = (currentDay + 6) % daysInMonth || daysInMonth;
-
-switch(currentDay % 7) {
-  case 0:
-    firstSpan1.textContent = "Неделя";
-    secondSpan1.textContent = "Понеделник";
-    thirdSpan1.textContent = "Вторник";
-    fourthSpan1.textContent = "Сряда";
-    fifthSpan1.textContent = "Четвъртък";
-    sixthSpan1.textContent = "Петък";
-    seventhSpan1.textContent = "Събота";
-    break;
-  case 1:
-    firstSpan1.textContent = "Понеделник";
-    secondSpan1.textContent = "Вторник";
-    thirdSpan1.textContent = "Сряда";
-    fourthSpan1.textContent = "Четвъртък";
-    fifthSpan1.textContent = "Петък";
-    sixthSpan1.textContent = "Събота";
-    seventhSpan1.textContent = "Неделя";
-    break;
-  case 2:
-    firstSpan1.textContent = "Вторник";
-    secondSpan1.textContent = "Сряда";
-    thirdSpan1.textContent = "Четвъртък";
-    fourthSpan1.textContent = "Петък";
-    fifthSpan1.textContent = "Събота";
-    sixthSpan1.textContent = "Неделя";
-    seventhSpan1.textContent = "Понеделник";
-    break;
-  case 3:
-    firstSpan1.textContent = "Сряда";
-    secondSpan1.textContent = "Четвъртък";
-    thirdSpan1.textContent = "Петък";
-    fourthSpan1.textContent = "Събота";
-    fifthSpan1.textContent = "Неделя";
-    sixthSpan1.textContent = "Понеделник";
-    seventhSpan1.textContent = "Вторник";
-    break;
-  case 4:
-    firstSpan1.textContent = "Четвъртък";
-    secondSpan1.textContent = "Петък";
-    thirdSpan1.textContent = "Събота";
-    fourthSpan1.textContent = "Неделя";
-    fifthSpan1.textContent = "Понеделник";
-    sixthSpan1.textContent = "Вторник";
-    seventhSpan1.textContent = "Сряда";
-    break;
-  case 5:
-    firstSpan1.textContent = "Петък";
-    secondSpan1.textContent = "Събота";
-    thirdSpan1.textContent = "Неделя";
-    fourthSpan1.textContent = "Понеделник";
-    fifthSpan1.textContent = "Вторник";
-    sixthSpan1.textContent = "Сряда";
-    seventhSpan1.textContent = "Четвъртък";
-    break;
-  case 6:
-    firstSpan1.textContent = "Събота";
-    secondSpan1.textContent = "Неделя";
-    thirdSpan1.textContent = "Понеделник";
-    fourthSpan1.textContent = "Вторник";
-    fifthSpan1.textContent = "Сряда";
-    sixthSpan1.textContent = "Четвъртък";
-    seventhSpan1.textContent = "Петък";
-    break;
-}
 
 const monthNames = ["Януари", "Февруари", "Март", "Април", "Май", "Юни", "Юли", "Август", "Септември", "Октомври", "Ноември", "Декември"];
 
